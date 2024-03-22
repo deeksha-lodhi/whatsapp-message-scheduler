@@ -1,9 +1,40 @@
-# WhatsApp Message Scheduler
-We can schedule a WhatsApp message and send it to a contact or a group.
-- Used streamlit to create the webapp.
-- Used pywhatkit to automate the task.
-  
-To use it on your system,
-- install the required items from requirements.txt
-- streamlit run main.py: this opens a web app on your browser.
-- make sure you have WhatsApp logged in on the browser.
+# WhatsApp Message Scheduler with PyWhatKit
+
+This project enables users to schedule WhatsApp messages, including messages to groups, using the PyWhatKit library.
+
+## Features
+
+- Schedule messages to individuals or groups at specific times.
+- Support for both text and image-based messages.
+- Simple and user-friendly interface.
+
+## Usage
+
+1. Install PyWhatKit:
+
+    ```pip install pywhatkit```
+
+## Usage
+
+1. Install PyWhatKit:
+
+    ```pip install pywhatkit```
+
+
+Import PyWhatKit:
+
+    import pywhatkit
+
+Schedule a message:
+
+- For a number:
+
+    ```pywhatkit.sendwhatmsg('+1234567890', 'Hello!', 18, 30)```
+
+    Replace +1234567890 with the recipient's phone number or group_id and adjust the message content and time accordingly.
+
+- For a group
+
+    ```pywhatkit.sendwhatmsg_to_group(group_id, message, hour, minute)```
+    
+    To Know the Group Id: Get into the Group Info "Click on Invite via link" Add the suffix part of the link.
