@@ -31,6 +31,12 @@ This project enables users to schedule WhatsApp messages, including messages to 
     ```
     - Make sure you add the country code before sending a message to a number.
     - To Know the Group ID: Get into the Group Info "Click on Invite via link" Add the suffix part of the link.
+  
+4. Running the app:
+    - Open the terminal
+    - Enter the command: ```streamlit run main.py```
+    - A browser window will open displaying the web app
+    - Make sure you have WhatsApp web logged in before sending the message.
 
 ## Example Usage
 
