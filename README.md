@@ -1,4 +1,4 @@
-# WhatsApp Message Scheduler with PyWhatKit
+# WhatsApp Message Scheduler
 
 This project enables users to schedule WhatsApp messages, including messages to groups, using the PyWhatKit library.
 
