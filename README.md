@@ -13,11 +13,11 @@ This project enables users to schedule WhatsApp messages, including messages to 
 
     ```pip install pywhatkit```
 
-Import PyWhatKit:
+2. Import PyWhatKit:
 
     import pywhatkit
 
-Schedule a message:
+3. Schedule a message:
 
 - For a number:
 
