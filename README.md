@@ -4,8 +4,7 @@ This project enables users to schedule WhatsApp messages, including messages to 
 
 ## Features
 
-- Schedule messages to individuals or groups at specific times.
-- Support for both text and image-based messages.
+- Schedule text messages to individuals or groups at specific times.
 - Simple and user-friendly interface.
 
 ## Usage
