@@ -1,32 +1,50 @@
 # WhatsApp Message Scheduler
 
-This project enables users to schedule WhatsApp messages, including messages to groups, using the PyWhatKit library.
+This project enables users to schedule WhatsApp messages, including messages to groups, using the PyWhatKit library and Streamlit for building the user interface.
 
 ## Features
 
-- Schedule text messages to individuals or groups at specific times.
-- Simple and user-friendly interface.
+- Schedule messages to individuals or groups at specific times.
+- Support for text-based messages.
+- Interactive user interface built with Streamlit.
+- Simple and user-friendly experience.
 
 ## Usage
 
-1. Install PyWhatKit:
+1. Install PyWhatKit and Streamlit:
 
-    ```pip install pywhatkit```
+    ```pip install pywhatkit streamlit```
 
-2. Import PyWhatKit:
 
-    ```import pywhatkit```
-
-3. Schedule a message:
-
-    - For a number:
+2. Import PyWhatKit and Streamlit in your Python code:
     
-        ```pywhatkit.sendwhatmsg('+1234567890', 'Hello!', 18, 30)```
+    ```
+    import pywhatkit as pk
+    import streamlit as st
+    ```
 
-        Replace +1234567890 with the recipient's phone number or group_id and adjust the message content and time accordingly.
-
-    - For a group
+3. Use the Streamlit interface to schedule a message:
     
-        ```pywhatkit.sendwhatmsg_to_group(group_id, message, hour, minute)```
-        
-        To Know the Group Id: Get into the Group Info "Click on Invite via link" Add the suffix part of the link.
+    ```
+    pk.sendwhatmsg(number, message, hour, minute)
+    pk.sendwhatmsg_to_group(group_id, message, hour, minute)
+    ```
+    - Make sure you add the country code before sending a message to a number.
+    - To Know the Group ID: Get into the Group Info "Click on Invite via link" Add the suffix part of the link.
+
+## Example Usage
+
+```
+import pywhatkit as pk
+import streamlit as st
+
+# Get user inputs using Streamlit
+group_id = st.text_input("Enter group ID (optional):")
+message = st.text_input("Enter your message:")
+hour = st.number_input("Enter hour (24-hour format):", min_value=0, max_value=23)
+minute = st.number_input("Enter minute:", min_value=0, max_value=59)
+
+# Send a message to a group
+pk.sendwhatmsg_to_group(group_id, message, hour, minute)
+```
+
