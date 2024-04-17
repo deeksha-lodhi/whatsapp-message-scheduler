@@ -2,7 +2,7 @@ import streamlit as st
 import pywhatkit as pk
 import time
 
-st.title("WhatsApp Message Sender")
+st.title("WhatsApp Message Scheduler")
 
 # Get user inputs
 message = st.text_input("Enter your message:")
